@@ -1,5 +1,7 @@
 package secretmanager
 
+import "context"
+
 type SecretManager interface {
-	Get(key string) interface{}
+	Get(ctx context.Context, key string) (interface{}, error)
 }
